@@ -11,10 +11,10 @@ namespace DataStructure
             Console.WriteLine("LINKED LIST -->\n");
             LinkedListOperation list = new LinkedListOperation();
             bool check = true;
-            Console.WriteLine("1.Simple Linked List\n2.Add in reverse order\n3.Exit");
+            Console.WriteLine("1.Simple Linked List\n2.Add in reverse order\n3.Append Data\n4.Exit");
             while (check)
             {
-                Console.Write("\nEnter an option to execute : \n");
+                Console.Write("\nEnter an option to execute : ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,11 @@ namespace DataStructure
                         list.AddInReverseOrder(70);
                         break;
                     case 3:
+                        list.Add(56);
+                        list.Append(30);
+                        list.Append(70);
+                        break;
+                    case 4:
                         check = false;
                         break;
                 }

@@ -25,7 +25,7 @@ namespace DataStructure
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} Inserted into Linked List !", node.data);
+            Console.WriteLine("\n{0} Inserted into Linked List !", node.data);
         }
         public void Display()
         {
@@ -55,6 +55,18 @@ namespace DataStructure
                 Node temp = this.head;
                 head = newNode;
             }
+            Display();
+        }
+        public void Append(int data)
+        {
+            Node node = new Node(data);
+            Node temp = head;
+            while (temp.next != null)
+            {
+                temp = temp.next;
+            }
+            temp.next = node;
+            Console.WriteLine("\n" + node.data + " " + "appended into Linked List");
             Display();
         }
     }
