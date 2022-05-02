@@ -11,7 +11,7 @@ namespace DataStructure
             Console.WriteLine("LINKED LIST -->\n");
             LinkedListOperation list = new LinkedListOperation();
             bool check = true;
-            Console.WriteLine("1.Simple Linked List\n2.Add in reverse order\n3.Append Data\n4.Insert Data\n5.Delete Data\n6.Exit");
+            Console.WriteLine("1.Simple Linked List\n2.Add in reverse order\n3.Append Data\n4.Insert Data\n5.Delete Data\n6.Delete Last Element\n7.Exit");
             while (check)
             {
                 Console.Write("\nEnter an option to execute : ");
@@ -48,6 +48,10 @@ namespace DataStructure
                         list.Display();
                         break;
                     case 6:
+                        list.RemoveLastNode();
+                        list.Display();
+                        break;
+                    case 7:
                         check = false;
                         break;
                 }
