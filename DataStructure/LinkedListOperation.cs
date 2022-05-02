@@ -43,5 +43,19 @@ namespace DataStructure
             }
             Console.Write("\n");
         }
+        public void AddInReverseOrder(int data)
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+            }
+            Display();
+        }
     }
 }
